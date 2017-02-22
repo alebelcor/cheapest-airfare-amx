@@ -2,6 +2,8 @@
 
 >️ Get the cheapest airfare of an [Aeroméxico](https://aeromexico.com) flight
 
+[![Build Status](https://img.shields.io/travis/alebelcor/cheapest-airfare-amx/master.svg)](https://travis-ci.org/alebelcor/cheapest-airfare-amx)
+
 ## Install
 
 Ensure you have [Node.js](https://nodejs.org) version 4+ installed.
