@@ -1,0 +1,38 @@
+{
+  "name": "cheapest-airfare-amx",
+  "version": "1.0.0",
+  "description": "Get the cheapest airfare of an Aeroméxico flight",
+  "bugs": "https://github.com/alebelcor/cheapest-airfare-amx/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Alejandro Beltrán",
+    "email": "alebelcor@gmail.com",
+    "url": "https://github.com/alebelcor"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alebelcor/cheapest-airfare-amx"
+  },
+  "scripts": {
+    "test": "ava",
+    "watch": "ava --watch"
+  },
+  "dependencies": {
+    "airports": "^1.0.0",
+    "got": "^6.7.1",
+    "moment": "^2.17.1",
+    "ua-string": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "is-plain-obj": "^1.1.0",
+    "sinon": "^1.17.7",
+    "sinon-as-promised": "^4.0.2"
+  },
+  "private": true
+}
