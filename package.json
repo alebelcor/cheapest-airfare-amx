@@ -34,5 +34,8 @@
     "sinon": "^1.17.7",
     "sinon-as-promised": "^4.0.2"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "private": true
 }
