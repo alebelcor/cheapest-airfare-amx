@@ -15,7 +15,7 @@ let data = {
   }],
   inbound: [{
     fares: [{
-      total: 800
+      total: 800.1234
     }]
   }, {
     fares: [{
@@ -25,7 +25,7 @@ let data = {
 };
 
 test('it should return the cheapest total', (t) => {
-  t.is(get(data), 1300);
+  t.is(get(data), 1300.12);
 
   delete data.inbound;
   t.is(get(data), 500);
