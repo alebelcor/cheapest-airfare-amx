@@ -15,17 +15,17 @@ const options = {
   returnDate: today.add(25, 'days').format(constants.DATETIME_DATE_FORMAT)
 };
 
-test('it should return a result object', function (t) {
+test('it should return a result object', t => {
   t.true(isPlainObj(getResult(1000, options)));
 });
 
-test('it should return a result object with certain members', function (t) {
+test('it should return a result object with certain members', t => {
   const result = getResult(2000, options);
 
-  t.true(result.hasOwnProperty('total'));
+  t.true(Object.prototype.hasOwnProperty.call(result, 'total'));
   t.is(typeof result.total, 'number');
   t.is(result.total, 2000);
 
-  t.true(result.hasOwnProperty('source'));
+  t.true(Object.prototype.hasOwnProperty.call(result, 'source'));
   t.is(typeof result.source, 'string');
 });

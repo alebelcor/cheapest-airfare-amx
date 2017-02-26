@@ -2,14 +2,14 @@
 
 import test from 'ava';
 import sinon from 'sinon';
-import 'sinon-as-promised';
+import _ from 'sinon-as-promised';
 import got from 'got';
 import moment from 'moment';
 import isPlainObj from 'is-plain-obj';
 
 import constants from '../lib/constants';
 import fetch from '../lib/fetch-detailed-fares';
-import fixtures from './fixtures.json';
+import fixtures from './fixtures';
 
 const today = moment();
 const options = {
@@ -21,22 +21,22 @@ const options = {
 let cartId;
 let get;
 
-test.before((t) => {
+test.before(() => {
   cartId = `foo-${Math.floor(Math.random() * 1000)}`;
   get = sinon.stub(got, 'get').resolves({
     body: fixtures
   });
 });
 
-test.after((t) => {
+test.after(() => {
   get.restore();
 });
 
-test('it should return a promise', (t) => {
+test('it should return a promise', t => {
   t.true(typeof fetch(cartId, options).then === 'function');
 });
 
-test('it should return an object', async (t) => {
+test('it should return an object', async t => {
   const data = await fetch(cartId, options);
 
   t.true(isPlainObj(data));

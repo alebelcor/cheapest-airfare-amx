@@ -24,7 +24,7 @@ let data = {
   }]
 };
 
-test('it should return the cheapest total', (t) => {
+test('it should return the cheapest total', t => {
   t.is(get(data), 1300.12);
 
   delete data.inbound;

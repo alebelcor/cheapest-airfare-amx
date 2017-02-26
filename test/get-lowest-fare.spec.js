@@ -12,10 +12,10 @@ let leg = {
 };
 let lowestFare;
 
-test.beforeEach((t) => {
+test.beforeEach(() => {
   lowestFare = get(leg);
 });
 
-test('it should return the lowest fare', (t) => {
+test('it should return the lowest fare', t => {
   t.is(lowestFare, 1000);
 });

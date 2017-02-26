@@ -18,15 +18,15 @@ let legs = [{
 }];
 let sortedLegs;
 
-test.beforeEach((t) => {
+test.beforeEach(() => {
   sortedLegs = get(legs);
 });
 
-test('it should return an array', (t) => {
+test('it should return an array', t => {
   t.true(Array.isArray(sortedLegs));
 });
 
-test('it should return a sorted array', (t) => {
+test('it should return a sorted array', t => {
   t.is(sortedLegs[0].fares[0].total, 500);
   t.is(sortedLegs[1].fares[0].total, 1000);
 });

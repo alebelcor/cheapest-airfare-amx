@@ -18,10 +18,10 @@ let legs = [{
 }];
 let cheapeastLeg;
 
-test.beforeEach((t) => {
+test.beforeEach(() => {
   cheapeastLeg = get(legs);
 });
 
-test('it should return the cheapest leg', (t) => {
+test('it should return the cheapest leg', t => {
   t.is(cheapeastLeg.fares[0].total, 500);
 });

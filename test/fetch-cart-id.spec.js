@@ -2,14 +2,14 @@
 
 import test from 'ava';
 import sinon from 'sinon';
-import 'sinon-as-promised';
+import _ from 'sinon-as-promised';
 import got from 'got';
 
 import fetch from '../lib/fetch-cart-id';
 
 let post;
 
-test.before((t) => {
+test.before(() => {
   post = sinon.stub(got, 'post').resolves({
     body: {
       _meta: {
@@ -19,15 +19,15 @@ test.before((t) => {
   });
 });
 
-test.after((t) => {
+test.after(() => {
   post.restore();
 });
 
-test('it should return a promise', (t) => {
+test('it should return a promise', t => {
   t.true(typeof fetch().then === 'function');
 });
 
-test('it should return the cart ID', async (t) => {
+test('it should return the cart ID', async t => {
   const id = await fetch();
 
   t.true(typeof id === 'string');

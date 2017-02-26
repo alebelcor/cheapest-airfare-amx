@@ -4,15 +4,15 @@ import test from 'ava';
 import isPlainObj from 'is-plain-obj';
 import get from '../lib/get-normalized-data';
 
-import fixtures from './fixtures.json';
+import fixtures from './fixtures';
 
 let data;
 
-test.beforeEach((t) => {
+test.beforeEach(() => {
   data = get(fixtures);
 });
 
-test('it should throw an error when there is no availability', (t) => {
+test('it should throw an error when there is no availability', t => {
   let error;
 
   error = t.throws(() => {
@@ -28,11 +28,11 @@ test('it should throw an error when there is no availability', (t) => {
   t.is(error.message, 'No availability found');
 });
 
-test('it should return an object', (t) => {
+test('it should return an object', t => {
   t.true(isPlainObj(data));
 });
 
-test('it should have certain members', (t) => {
-  t.true(data.hasOwnProperty('outbound'));
-  t.true(data.hasOwnProperty('inbound'));
+test('it should have certain members', t => {
+  t.true(Object.prototype.hasOwnProperty.call(data, 'outbound'));
+  t.true(Object.prototype.hasOwnProperty.call(data, 'inbound'));
 });

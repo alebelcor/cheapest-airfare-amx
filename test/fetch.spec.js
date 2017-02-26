@@ -2,14 +2,14 @@
 
 import test from 'ava';
 import sinon from 'sinon';
-import 'sinon-as-promised';
+import _ from 'sinon-as-promised';
 import got from 'got';
 import moment from 'moment';
 import isPlainObj from 'is-plain-obj';
 
 import constants from '../lib/constants';
 import fetch from '../lib/fetch';
-import fixtures from './fixtures.json';
+import fixtures from './fixtures';
 
 const today = moment();
 const options = {
@@ -22,7 +22,7 @@ const options = {
 let post;
 let get;
 
-test.before((t) => {
+test.before(() => {
   post = sinon.stub(got, 'post').resolves({
     body: {
       _meta: {
@@ -36,16 +36,16 @@ test.before((t) => {
   });
 });
 
-test.after((t) => {
+test.after(() => {
   post.restore();
   get.restore();
 });
 
-test('it should return a promise', (t) => {
+test('it should return a promise', t => {
   t.true(typeof fetch(options).then === 'function');
 });
 
-test('it should return an object', async (t) => {
+test('it should return an object', async t => {
   const data = await fetch(options);
 
   t.true(isPlainObj(data));
