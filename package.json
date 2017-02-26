@@ -19,7 +19,8 @@
     "url": "https://github.com/alebelcor/cheapest-airfare-amx"
   },
   "scripts": {
-    "test": "ava",
+    "lint": "xo",
+    "test": "npm run lint && ava",
     "watch": "ava --watch"
   },
   "dependencies": {
@@ -32,10 +33,14 @@
     "ava": "^0.17.0",
     "is-plain-obj": "^1.1.0",
     "sinon": "^1.17.7",
-    "sinon-as-promised": "^4.0.2"
+    "sinon-as-promised": "^4.0.2",
+    "xo": "^0.17.1"
   },
   "engines": {
     "node": ">=4"
   },
-  "private": true
+  "private": true,
+  "xo": {
+    "space": true
+  }
 }
