@@ -24,6 +24,5 @@ test('leg should be an object', (t) => {
 });
 
 test('legs should have certain members', (t) => {
-  t.true(leg.hasOwnProperty('segments'));
   t.true(leg.hasOwnProperty('fares'));
 });
