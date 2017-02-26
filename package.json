@@ -19,8 +19,7 @@
     "url": "https://github.com/alebelcor/cheapest-airfare-amx"
   },
   "scripts": {
-    "lint": "xo",
-    "test": "npm run lint && ava",
+    "test": "xo && ava",
     "watch": "ava --watch"
   },
   "dependencies": {
