@@ -68,6 +68,11 @@ Type: `string`
 
 Return date in `YYYY-MM-DD`. Leave out if it's a one-way flight.
 
+## Related
+
+* [amx-tracker](https://github.com/alebelcor/amx-tracker) - Track changes in [Aeroméxico](https://aeromexico.com) fare prices through the command-line
+* [cheapest-airfare-viv](https://github.com/alebelcor/cheapest-airfare-viv) - Get the cheapest airfare of a [VivaAerobus](https://www.vivaaerobus.com) flight
+
 ## License
 
 MIT © Alejandro Beltrán
