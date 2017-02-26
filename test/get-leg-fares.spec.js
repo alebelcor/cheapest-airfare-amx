@@ -1,7 +1,7 @@
 'use strict';
 
 import test from 'ava';
-import get from '../lib/get-leg-fares';
+import fn from '../lib/get-leg-fares';
 
 import fixtures from './fixtures';
 
@@ -9,7 +9,7 @@ let rawLeg = fixtures._collection[0]._collection[0];
 let legFares;
 
 test.beforeEach(() => {
-  legFares = get(rawLeg);
+  legFares = fn(rawLeg);
 });
 
 test('it should return an array', t => {

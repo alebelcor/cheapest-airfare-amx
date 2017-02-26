@@ -1,7 +1,7 @@
 'use strict';
 
 import test from 'ava';
-import get from '../lib/get-lowest-fare';
+import fn from '../lib/get-lowest-fare';
 
 let leg = {
   fares: [{
@@ -13,7 +13,7 @@ let leg = {
 let lowestFare;
 
 test.beforeEach(() => {
-  lowestFare = get(leg);
+  lowestFare = fn(leg);
 });
 
 test('it should return the lowest fare', t => {

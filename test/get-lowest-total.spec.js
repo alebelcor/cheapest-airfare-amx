@@ -1,7 +1,7 @@
 'use strict';
 
 import test from 'ava';
-import get from '../lib/get-lowest-total';
+import fn from '../lib/get-lowest-total';
 
 let data = {
   outbound: [{
@@ -25,8 +25,8 @@ let data = {
 };
 
 test('it should return the cheapest total', t => {
-  t.is(get(data), 1300.12);
+  t.is(fn(data), 1300.12);
 
   delete data.inbound;
-  t.is(get(data), 500);
+  t.is(fn(data), 500);
 });

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import _ from 'sinon-as-promised';
 import got from 'got';
 
-import fetch from '../lib/fetch-cart-id';
+import fn from '../lib/fetch-cart-id';
 
 let post;
 
@@ -24,11 +24,11 @@ test.after(() => {
 });
 
 test('it should return a promise', t => {
-  t.true(typeof fetch().then === 'function');
+  t.true(typeof fn().then === 'function');
 });
 
 test('it should return the cart ID', async t => {
-  const id = await fetch();
+  const id = await fn();
 
   t.true(typeof id === 'string');
   t.true(id.length > 0);

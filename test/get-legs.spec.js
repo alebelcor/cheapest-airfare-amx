@@ -2,7 +2,7 @@
 
 import test from 'ava';
 import isPlainObj from 'is-plain-obj';
-import get from '../lib/get-legs';
+import fn from '../lib/get-legs';
 
 import fixtures from './fixtures';
 
@@ -11,7 +11,7 @@ let legs;
 let leg;
 
 test.beforeEach(() => {
-  legs = get(rawLegs);
+  legs = fn(rawLegs);
   leg = legs[0];
 });
 

@@ -5,7 +5,7 @@ import moment from 'moment';
 import isPlainObj from 'is-plain-obj';
 
 import constants from '../lib/constants';
-import getResult from '../lib/get-result';
+import fn from '../lib/get-result';
 
 const today = moment();
 const options = {
@@ -16,11 +16,11 @@ const options = {
 };
 
 test('it should return a result object', t => {
-  t.true(isPlainObj(getResult(1000, options)));
+  t.true(isPlainObj(fn(1000, options)));
 });
 
 test('it should return a result object with certain members', t => {
-  const result = getResult(2000, options);
+  const result = fn(2000, options);
 
   t.true(Object.prototype.hasOwnProperty.call(result, 'total'));
   t.is(typeof result.total, 'number');

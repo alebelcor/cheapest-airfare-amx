@@ -1,7 +1,7 @@
 'use strict';
 
 import test from 'ava';
-import get from '../lib/get-sorted-legs-by-lowest-fare';
+import fn from '../lib/get-sorted-legs-by-lowest-fare';
 
 let legs = [{
   fares: [{
@@ -19,7 +19,7 @@ let legs = [{
 let sortedLegs;
 
 test.beforeEach(() => {
-  sortedLegs = get(legs);
+  sortedLegs = fn(legs);
 });
 
 test('it should return an array', t => {

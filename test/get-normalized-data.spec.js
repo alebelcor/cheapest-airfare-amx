@@ -2,27 +2,27 @@
 
 import test from 'ava';
 import isPlainObj from 'is-plain-obj';
-import get from '../lib/get-normalized-data';
+import fn from '../lib/get-normalized-data';
 
 import fixtures from './fixtures';
 
 let data;
 
 test.beforeEach(() => {
-  data = get(fixtures);
+  data = fn(fixtures);
 });
 
 test('it should throw an error when there is no availability', t => {
   let error;
 
   error = t.throws(() => {
-    get({status: 'UNAVAILABLE'});
+    fn({status: 'UNAVAILABLE'});
   });
 
   t.is(error.message, 'No availability found');
 
   error = t.throws(() => {
-    get({_collection: []});
+    fn({_collection: []});
   });
 
   t.is(error.message, 'No availability found');

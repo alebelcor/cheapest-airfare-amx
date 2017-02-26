@@ -8,7 +8,7 @@ import moment from 'moment';
 import isPlainObj from 'is-plain-obj';
 
 import constants from '../lib/constants';
-import fetch from '../lib/fetch-detailed-fares';
+import fn from '../lib/fetch-detailed-fares';
 import fixtures from './fixtures';
 
 const today = moment();
@@ -33,11 +33,11 @@ test.after(() => {
 });
 
 test('it should return a promise', t => {
-  t.true(typeof fetch(cartId, options).then === 'function');
+  t.true(typeof fn(cartId, options).then === 'function');
 });
 
 test('it should return an object', async t => {
-  const data = await fetch(cartId, options);
+  const data = await fn(cartId, options);
 
   t.true(isPlainObj(data));
 });
