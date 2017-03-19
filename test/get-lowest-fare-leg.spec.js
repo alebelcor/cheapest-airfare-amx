@@ -3,7 +3,7 @@
 import test from 'ava';
 import fn from '../lib/get-lowest-fare-leg';
 
-let legs = [{
+const legs = [{
   fares: [{
     total: 1000
   }, {

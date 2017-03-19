@@ -2,7 +2,7 @@
 
 import test from 'ava';
 import sinon from 'sinon';
-import _ from 'sinon-as-promised';
+import 'sinon-as-promised';  // eslint-disable-line import/no-unassigned-import
 import got from 'got';
 import moment from 'moment';
 import isPlainObj from 'is-plain-obj';

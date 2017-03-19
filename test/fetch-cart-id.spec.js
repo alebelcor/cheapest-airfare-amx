@@ -2,7 +2,7 @@
 
 import test from 'ava';
 import sinon from 'sinon';
-import _ from 'sinon-as-promised';
+import 'sinon-as-promised';  // eslint-disable-line import/no-unassigned-import
 import got from 'got';
 
 import fn from '../lib/fetch-cart-id';

@@ -6,7 +6,7 @@ import fn from '../lib/get-legs';
 
 import fixtures from './fixtures';
 
-let rawLegs = fixtures._collection[0]._collection;
+const rawLegs = fixtures._collection[0]._collection;
 let legs;
 let leg;
 

@@ -5,7 +5,7 @@ import fn from '../lib/get-leg-fares';
 
 import fixtures from './fixtures';
 
-let rawLeg = fixtures._collection[0]._collection[0];
+const rawLeg = fixtures._collection[0]._collection[0];
 let legFares;
 
 test.beforeEach(() => {
@@ -23,7 +23,5 @@ test('it should return a one element array', t => {
 test('fares should have certain members', t => {
   const fare = legFares[0];
 
-  t.true(Object.prototype.hasOwnProperty.call(fare, 'seatsRemaining'));
   t.true(Object.prototype.hasOwnProperty.call(fare, 'total'));
-  t.true(Object.prototype.hasOwnProperty.call(fare, 'currencyCode'));
 });

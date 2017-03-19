@@ -3,7 +3,7 @@
 import test from 'ava';
 import fn from '../lib/get-lowest-total';
 
-let data = {
+const data = {
   outbound: [{
     fares: [{
       total: 1000
