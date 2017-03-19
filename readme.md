@@ -72,6 +72,7 @@ Return date in `YYYY-MM-DD`. Leave out if it's a one-way flight.
 
 * [amx-tracker](https://github.com/alebelcor/amx-tracker) - Track changes in [Aeroméxico](https://aeromexico.com) fare prices through the command-line
 * [cheapest-airfare-viv](https://github.com/alebelcor/cheapest-airfare-viv) - Get the cheapest airfare of a [VivaAerobus](https://www.vivaaerobus.com) flight
+* [cheapest-airfare-voi](https://github.com/alebelcor/cheapest-airfare-voi) - Get the cheapest airfare of a [Volaris](https://www.volaris.com) flight
 
 ## License
 
